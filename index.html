@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login & Sign Up</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #9face6);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 350px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        padding: 30px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #4a69bd;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background: #1e3799;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    a {
+        color: #4a69bd;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .signup {
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Login Form -->
+    <div class="login">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button>Login</button>
+        <p>Don't have an account? <a onclick="showSignup()">Sign Up</a></p>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div class="signup">
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button>Register</button>
+        <p>Already have an account? <a onclick="showLogin()">Login</a></p>
+    </div>
+
+</div>
+
+<script>
+    function showSignup() {
+        document.querySelector('.login').style.display = 'none';
+        document.querySelector('.signup').style.display = 'block';
+    }
+
+    function showLogin() {
+        document.querySelector('.signup').style.display = 'none';
+        document.querySelector('.login').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
